@@ -134,5 +134,7 @@ endfunc
 
 nnoremap <C-l> :call NumberToggle()<cr>
 
-" enable zfz
+
+
+" zfz
 set rtp+=/opt/homebrew/opt/fzf

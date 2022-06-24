@@ -18,9 +18,25 @@ dotfiles:
   f_zshrc:
     dst: ~/.zshrc
     src: .zshrc 
+  f_bashrc:
+    dst: ~/.bashrc
+    src: .bashrc
+  f_bash_aliases:
+    dst: ~/.bash_aliases
+    src: .bash_aliases
+  f_gitignore_global:
+    dst: ~/.gitignore_global
+    src: .gitignore_global
+  f_key_bindings:
+    dst: ~/.key-bindings.zsh
+    src: .key-bindings.zsh
 profiles:
   home:
     dotfiles:
     - f_vimrc
     - f_tmux.conf
     - f_zshrc
+    - f_bashrc
+    - f_bash_aliases
+    - f_gitignore_global
+    - f_key_bindings
