@@ -12,8 +12,8 @@ set -o vi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /sbin/terraform terraform
 
-source /usr/local/Cellar/fzf/0.30.0/shell/key-bindings.zsh
-source /usr/local/Cellar/fzf/0.30.0/shell/completion.zsh
+source /opt/homebrew/Cellar/fzf/0.30.0/shell/key-bindings.zsh
+source /opt/homebrew/Cellar/fzf/0.30.0/shell/completion.zsh
 source ~/.key-bindings.zsh
 
 #source ~/config/set-tmux-title.sh

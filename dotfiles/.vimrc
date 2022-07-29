@@ -71,7 +71,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'chase/vim-ansible-yaml' 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 " for work need run npm i prettier
-"#Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 if has('nvim')
@@ -87,7 +87,7 @@ if has('nvim')
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " post install (yarn install | npm install) then load plugin only for editing supported files
         " for work need run npm i prettier
-        "#Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+        Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
         call plug#end()
 endif
 
