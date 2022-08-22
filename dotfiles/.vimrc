@@ -96,6 +96,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <C-o> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " show hidden files in NERDTree
 
 " For vim-gittgutter
 let g:gitgutter_sign_added = '➕'
