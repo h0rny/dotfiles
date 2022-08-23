@@ -12,8 +12,6 @@ set -o vi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /sbin/terraform terraform
 
-source /opt/homebrew/Cellar/fzf/0.30.0/shell/key-bindings.zsh
-source /opt/homebrew/Cellar/fzf/0.30.0/shell/completion.zsh
 source ~/.key-bindings.zsh
 
 #source ~/config/set-tmux-title.sh
@@ -50,3 +48,5 @@ if [[ $#h -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts 
   zstyle ':completion:*:slogin:*' hosts $h
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
