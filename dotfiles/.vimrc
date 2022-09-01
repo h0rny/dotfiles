@@ -85,7 +85,6 @@ if has('nvim')
         Plug 'github/copilot.vim'
         Plug 'vim-airline/vim-airline'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-        " post install (yarn install | npm install) then load plugin only for editing supported files
         " for work need run npm i prettier
         Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
         call plug#end()
@@ -111,6 +110,7 @@ noremap <C-a> :Prettier<CR>
 
 " For coopilot
 let g:copilot_node_command = "~/.nodenv/versions/17.9.1/bin/node"
+let g:copilot_filetypes = {'xml': v:false,'*': v:true}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,8 +134,6 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-l> :call NumberToggle()<cr>
-
-
 
 " zfz
 set rtp+=/opt/homebrew/opt/fzf

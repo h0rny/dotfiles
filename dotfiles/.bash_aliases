@@ -20,6 +20,7 @@ alias gpu='git push -u origin'
 alias gpcur='git push -u origin HEAD'
 alias glo="git log --oneline"
 alias glol="git log --graph --decorate --pretty=oneline --abbrev-commit"
+alias glola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
 ## tmux 
 alias tm='tmux'
