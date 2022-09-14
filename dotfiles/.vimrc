@@ -40,6 +40,15 @@ inoremap jk <esc>
 " set mouse on 
 set mouse=a
 
+" set default split settings
+set splitbelow
+set splitright
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " trun off search highlight
@@ -134,7 +143,7 @@ function! NumberToggle()
     endif
 endfunc
 
-nnoremap <C-l> :call NumberToggle()<cr>
+nnoremap <C-e> :call NumberToggle()<cr>
 
 " zfz
 set rtp+=/opt/homebrew/opt/fzf
