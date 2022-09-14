@@ -2,7 +2,7 @@ export ZSH="/Users/artem/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git fzf docker kubectl ansible)
+plugins=(git fzf docker kubectl ansible helm)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases

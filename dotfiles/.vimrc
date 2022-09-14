@@ -84,6 +84,7 @@ if has('nvim')
         Plug 'airblade/vim-gitgutter'
         Plug 'github/copilot.vim'
         Plug 'vim-airline/vim-airline'
+        Plug 'Yggdroot/indentLine'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " for work need run npm i prettier
         Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
