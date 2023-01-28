@@ -21,6 +21,7 @@ alias gpcur='git push -u origin HEAD'
 alias glo="git log --oneline"
 alias glol="git log --graph --decorate --pretty=oneline --abbrev-commit"
 alias glola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
+alias gwip='git commit -am "wip" && gpcur'
 
 ## tmux 
 alias tm='tmux'

@@ -17,7 +17,7 @@ source ~/.key-bindings.zsh
 #source ~/config/set-tmux-title.sh
 
 
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -34,19 +34,27 @@ bindkey -M vicmd v edit-command-line
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-setopt CORRECT_ALL
-SPROMPT="Ошибка! Вы хотели ввести %r вместо %R? ([Y]es/[N]o/[E]dit/[A]bort) "
+#setopt CORRECT_ALL
+#SPROMPT="Ошибка! Вы хотели ввести %r вместо %R? ([Y]es/[N]o/[E]dit/[A]bort) "
  
 h=()
+
 if [[ -r ~/.ssh/config ]]; then
   h=($h ${${${(@M)${(f)"$(cat ~/.ssh/config)"}:#Host *}#Host }:#*[*?]*})
 fi
+
 if [[ -r ~/.ssh/known_hosts ]]; then
   h=($h ${${${(f)"$(cat ~/.ssh/known_hosts{,2} || true)"}%%\ *}%%,*}) 2>/dev/null
 fi
+
 if [[ $#h -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts 
   zstyle ':completion:*:slogin:*' hosts $h
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
